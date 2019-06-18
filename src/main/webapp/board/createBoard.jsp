@@ -54,7 +54,7 @@
 					<div class="col-sm-8 blog-main">
 						<h2 class="sub-header">게시판 등록</h2>
 						
-						<form id="frm" class="form-horizontal" role="form" action="${cp }/create_board" method="post">
+						<form id="frm" class="form-horizontal" role="form" action="${pageContext.request.contextPath}/create_board" method="post">
 							<!-- 값 넘기기 -->
 							<input type="hidden" id="userId" name="userId" value="${USER_INFO.userId}">
 						
@@ -74,7 +74,7 @@
 							</form>
 							
 							<c:forEach items="${boardAllList }" var="list">
-								<form id="frm1" class="form-horizontal" role="form" action="${cp }/create_board" method="post">
+								<form id="frm1" class="form-horizontal" role="form" action="${pageContext.request.contextPath}/create_board" method="post">
 									
 									<input type="hidden" id="board_id" name="board_id" value="${list.board_id}">
 									<input type="hidden" id="userId" name="userId" value="${USER_INFO.userId}">

@@ -79,7 +79,7 @@
 						<h2 class="sub-header">게시글 상세정보</h2>
 
 						<form id="frm" class="form-horizontal" role="form"
-							action="${cp }/modify" method="get">
+							action="${pageContext.request.contextPath}modify" method="get">
 							<input type="hidden" id="text_id" name="text_id" value="${textVo.text_id}"> 
 
 							<div class="form-group">
@@ -100,7 +100,7 @@
 							<div class="form-group">
 								<label for="userNm" class="col-sm-2 control-label">파일&nbsp;&nbsp;:</label>
 									<c:forEach items="${fileList}" var="file">
-											<a href="${cp}/fileDownload?file_id=${file.file_id}">${file.file_name}</a><br>
+											<a href="${pageContext.request.contextPath}/fileDownload?file_id=${file.file_id}">${file.file_name}</a><br>
 									</c:forEach>
 							</div>
 							
@@ -114,7 +114,7 @@
 										</div>
 
 										<div class="col-sm-2">
-											<a class="btn btn-default" href="${cp }/delete?text_id=${textVo.text_id}&userid=${textVo.userid}&board_id=${textVo.board_id}">
+											<a class="btn btn-default" href="${pageContext.request.contextPath}/delete?text_id=${textVo.text_id}&userid=${textVo.userid}&board_id=${textVo.board_id}">
 												게시글삭제</a>
 										</div>
 									</div>
@@ -123,7 +123,7 @@
 						</form>
 
 						
-						<form id="frm1" class="form-horizontal" role="form"	action="${cp }/comment" method="get">
+						<form id="frm1" class="form-horizontal" role="form"	action="${pageContext.request.contextPath}/comment" method="get">
 							<div class="form-group">
 								<div class="col-sm-10">
 									<input type="hidden" id="text_id" name="text_id" value="${textVo.text_id}"> 
@@ -136,7 +136,7 @@
 						</form>
 						
 						<!-- 답글 GG -->
-						<form id="frm2" class="form-horizontal" role="form"	action="${cp }/reply" method="get">
+						<form id="frm2" class="form-horizontal" role="form"	action="${pageContext.request.contextPath}/reply" method="get">
 							<div class="form-group">
 								<div class="col-sm-10">
 									<button id="btn2" type="button">답글작성</button>
@@ -156,7 +156,7 @@
 										${com.com_content} /
 										${com.userid} /
 										${com.com_date}
-										<a class="btn btn-default" href="${cp }/delCom?com_id=${com.com_id}&text_id=${com.text_id}">삭제!</a>
+										<a class="btn btn-default" href="${pageContext.request.contextPath}/delCom?com_id=${com.com_id}&text_id=${com.text_id}">삭제!</a>
 										<hr>
 									</dd>
 								</c:when>

@@ -69,7 +69,7 @@
 					<h2 class="sub-header">${boardVo.board_name} &nbsp;게시판</h2>
 				
 						<!-- 사용자 상세조회 : userId필요 -->
-						<form id="frm" action="${cp }/text" method="get">
+						<form id="frm" action="${pageContext.request.contextPath}/text" method="get">
 							<input type="hidden" id="textid" name="textid">
 							<input type="hidden" id="userid" name="userid" value="${USER_INFO.userId}">
 						</form>
@@ -111,7 +111,7 @@
 							</table>
 						</div>
 						
-						<a href="${cp}/createText?board_id=${board_id}&&userid=${userid}"class="btn btn-default pull-right">게시물 등록</a>
+						<a href="${pageContext.request.contextPath}/createText?board_id=${board_id}&&userid=${userid}"class="btn btn-default pull-right">게시물 등록</a>
 					
 						<div class="text-center">
 							<ul class="pagination">
@@ -122,7 +122,7 @@
 									</c:when>
 								<c:otherwise>
 								<li><a
-									href=" ${cp }/primaryBoard?board_id=${board_id}&page=1&pageSize=10">«</a>
+									href="${pageContext.request.contextPath}/primaryBoard?board_id=${board_id}&page=1&pageSize=10">«</a>
 								</li>
 								</c:otherwise>
 								</c:choose>
@@ -133,7 +133,7 @@
 									</c:when>
 									<c:otherwise>
 										<li><a
-											href=" ${cp }/primaryBoard?board_id=${board_id}&page=${pageVo.page-1}&pageSize=${pageVo.pageSize}">&lt; </a>
+											href="${pageContext.request.contextPath}/primaryBoard?board_id=${board_id}&page=${pageVo.page-1}&pageSize=${pageVo.pageSize}">&lt; </a>
 										</li>
 									</c:otherwise>
 								</c:choose>
@@ -145,7 +145,7 @@
 										</c:when>
 										<c:otherwise>
 											<li><a
-												href="${cp }/primaryBoard?board_id=${board_id}&page=${i}&pageSize=${pageVo.pageSize}">${i}</a>
+												href="${pageContext.request.contextPath}/primaryBoard?board_id=${board_id}&page=${i}&pageSize=${pageVo.pageSize}">${i}</a>
 											</li>
 										</c:otherwise>
 									</c:choose>
@@ -157,7 +157,7 @@
 									</c:when>
 									<c:otherwise>
 										<li><a
-											href=" ${cp }/primaryBoard?board_id=${board_id}&page=${pageVo.page+1}&pageSize=${pageVo.pageSize}">&gt;</a>
+											href="${pageContext.request.contextPath}/primaryBoard?board_id=${board_id}&page=${pageVo.page+1}&pageSize=${pageVo.pageSize}">&gt;</a>
 										</li>
 									</c:otherwise>
 								</c:choose>
@@ -168,7 +168,7 @@
 									</c:when>
 									<c:otherwise>
 									<li><a
-										href=" ${cp }/primaryBoard?board_id=${board_id}&page=${paginationSize}&pageSize=${pageVo.pageSize}">»</a>
+										href="${pageContext.request.contextPath}/primaryBoard?board_id=${board_id}&page=${paginationSize}&pageSize=${pageVo.pageSize}">»</a>
 									</li>
 									</c:otherwise>
 								</c:choose>

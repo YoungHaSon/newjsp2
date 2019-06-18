@@ -29,7 +29,7 @@
 
     <div class="container">
 								<%//el로 바꾸면! %>
-      <form id="frm" action="${cp}/login2" method="post" class="form-signin">
+      <form id="frm" action="${pageContext.request.contextPath}/login2" method="post" class="form-signin">
       
         <h2 class="form-signin-heading">Please sign in</h2>
         

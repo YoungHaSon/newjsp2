@@ -4,11 +4,11 @@
 <div class="col-sm-3 col-md-2 sidebar">
 	<ul class="nav nav-sidebar">
 	
-		<li class="active"><a href="${cp}/create_board">Create_Board</a></li>
+		<li class="active"><a href="${pageContext.request.contextPath}/create_board">Create_Board</a></li>
 		
 		
 		<c:forEach items="${boardList }" var="board">
-			<li class="active"><a href="${cp}/primaryBoard?board_id=${board.board_id}&&userid=${USER_INFO.userId}">${board.board_name }</a></li>
+			<li class="active"><a href="${pageContext.request.contextPath}/primaryBoard?board_id=${board.board_id}&&userid=${USER_INFO.userId}">${board.board_name }</a></li>
 		</c:forEach>
 	</ul>
 	
