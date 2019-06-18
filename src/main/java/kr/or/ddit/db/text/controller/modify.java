@@ -14,9 +14,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import kr.or.ddit.db.board.model.BoardVo;
 import kr.or.ddit.db.board.service.BoardService;
 import kr.or.ddit.db.board.service.IboardService;
@@ -27,6 +24,9 @@ import kr.or.ddit.db.text.model.TextVo;
 import kr.or.ddit.db.text.service.ItextService;
 import kr.or.ddit.db.text.service.TextService;
 import kr.or.ddit.util.PartUtil;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Servlet implementation class modify

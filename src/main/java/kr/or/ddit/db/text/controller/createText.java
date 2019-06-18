@@ -13,23 +13,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
-import javax.servlet.jsp.PageContext;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import kr.or.ddit.db.board.service.BoardService;
 import kr.or.ddit.db.board.service.IboardService;
-import kr.or.ddit.db.comment.service.ComService;
-import kr.or.ddit.db.comment.service.icomService;
 import kr.or.ddit.db.file.model.FileVo;
 import kr.or.ddit.db.file.service.FileService;
 import kr.or.ddit.db.file.service.IfileService;
 import kr.or.ddit.db.text.model.TextVo;
 import kr.or.ddit.db.text.service.ItextService;
 import kr.or.ddit.db.text.service.TextService;
-import kr.or.ddit.db.user.model.PageVo;
 import kr.or.ddit.util.PartUtil;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Servlet implementation class createText

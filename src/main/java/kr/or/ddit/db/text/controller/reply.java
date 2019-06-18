@@ -17,7 +17,6 @@ import kr.or.ddit.db.board.service.IboardService;
 import kr.or.ddit.db.text.model.TextVo;
 import kr.or.ddit.db.text.service.ItextService;
 import kr.or.ddit.db.text.service.TextService;
-import kr.or.ddit.db.user.model.UsersVo;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
