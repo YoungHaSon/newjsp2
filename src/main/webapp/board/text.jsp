@@ -79,7 +79,7 @@
 						<h2 class="sub-header">게시글 상세정보</h2>
 
 						<form id="frm" class="form-horizontal" role="form"
-							action="${pageContext.request.contextPath}modify" method="get">
+							action="${pageContext.request.contextPath}/modify" method="get">
 							<input type="hidden" id="text_id" name="text_id" value="${textVo.text_id}"> 
 
 							<div class="form-group">

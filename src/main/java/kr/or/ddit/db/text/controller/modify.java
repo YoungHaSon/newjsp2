@@ -76,6 +76,8 @@ public class modify extends HttpServlet {
 	      String userid = request.getParameter("userid");
 	      String text_title = request.getParameter("text");
 	      String text_content = request.getParameter("smarteditor");
+	      
+	      logger.debug("content:{}", text_content);
 	      int text_id = Integer.parseInt(request.getParameter("text_id"));
 	      
 	      List<Part> parts = (List<Part>) request.getParts();

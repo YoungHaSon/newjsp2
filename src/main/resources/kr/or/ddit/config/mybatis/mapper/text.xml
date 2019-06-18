@@ -49,7 +49,7 @@
 		TEXT_ID = #{text_id}
 	</update>
 
-	<update id="changeCol" parameterType="String">
+	<update id="changeCol" parameterType="int">
 		update
 		DB_TEXT
 		set
